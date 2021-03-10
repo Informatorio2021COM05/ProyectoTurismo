@@ -1,0 +1,40 @@
+{% extends 'ProyectoWebApp/base.html' %}
+
+
+  {% load static %}
+
+  {% block content %}
+
+<body>
+
+	<h1 style="color:antiquewhite">Estas buscando: <strong> {{query}} </strong></h1>
+
+	{% if ciudades %}
+
+		<h2 style="color: aliceblue;">Ciudades encontradas: {{ciudades|length}}</h2>
+
+		<ul>
+
+			{% for articulo in ciudades %}
+				<li style="position: -ms-page; color:rgb(255, 255, 255)">
+
+					Código postal: {{articulo.codigo_postal}} <br>Localidad: {{articulo.ciudad}} <br>{% if articulo.zona_turistica %} Hay lugares turisticos para conocer. {% endif %}
+					<br><br><img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{articulo.imagen.url}}" alt="">
+
+
+				</li>
+			{% endfor %}
+
+		</ul>
+
+	{% else %}
+
+		<p>No encontrado</p>
+
+	{% endif %}
+
+
+
+</body>
+
+{% endblock %}
