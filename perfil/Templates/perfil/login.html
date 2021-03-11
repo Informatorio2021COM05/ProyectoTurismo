@@ -11,7 +11,7 @@
   <body>
 
     <div class="login-box">
-      <img src="static/ProyectoStatic/img/logo.png" class="avatar" alt="Avatar Image">
+      <img src="{% static 'ProyectoStatic/img/logo.png' %}" class="avatar" alt="Avatar Image">
       <h1>Login Here</h1>
       <form method="POST">
         {% csrf_token%}
