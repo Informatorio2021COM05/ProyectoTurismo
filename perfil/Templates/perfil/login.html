@@ -1,0 +1,14 @@
+
+{% block title %}
+    Iniciar sesión
+{% endblock %}
+
+{% block contenido %}
+
+    <form method="POST">
+        {% csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Iniciar sesion">
+    </form>
+
+{% endblock %}
