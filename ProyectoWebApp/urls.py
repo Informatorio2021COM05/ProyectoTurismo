@@ -1,6 +1,6 @@
 from django.urls import path
 
-from ProyectoWebApp.views import home, buscar
+from ProyectoWebApp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', home, name="Inicio"),
     path('buscar/', buscar, name="Busqueda"),
+    path('perfil/', perfil, name="perfil"),
 ]
 
 

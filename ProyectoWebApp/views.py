@@ -40,3 +40,13 @@ def buscar(request):
 
 	return HttpResponse(mensaje)
 
+def perfil(request):
+	template = "ProyectoWebApp/inicio.html"
+	contexto = {
+	"nombre": "Fabian", 
+	"numero": 234
+	}
+	return render(request, template, contexto)
+
+
+

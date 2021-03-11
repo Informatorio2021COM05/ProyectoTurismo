@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ProyectoWebApp',
     'ServiciosApp',
     'tienda',
+    'perfil', 
 
    ]
 
