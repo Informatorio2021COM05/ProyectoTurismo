@@ -62,12 +62,8 @@
           <li class="nav-item {% if request.path|slice:':6' == '/blog/' %} active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
           </li>
-          <li class="nav-item {% if request.path == '/perfilUser/' %} active {% endif %} px-lg-4">
-            {% if request.user.is_authenticated %}
-                    <a href="{% url 'perfilUser:cerrar' %}">Cerrar sesión</a>
-            {% else %}
-                    <a href="{% url 'perfilUser:iniciar' %}">Iniciar sesión</a>
-            {% endif %}
+          <li class="nav-item {% if request.path == '/iniciar/' %} active {% endif %} px-lg-4">
+             <a class="nav-link text-uppercase text-expanded" href="http://127.0.0.1:8000/iniciar/">Iniciar Secion</a>
           </li>
         </ul>
       </div>
