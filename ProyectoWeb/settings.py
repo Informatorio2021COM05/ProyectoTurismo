@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'ProyectoWebApp',
     'ServiciosApp',
     'tienda',
-    'perfil', 
+    'perfil',
+    'perfilUser', 
 
    ]
 
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'ProyectoWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
