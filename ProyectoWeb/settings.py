@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'tienda',
     'perfil',
     'perfilUser', 
+    'perfil2',
 
    ]
 
@@ -138,3 +139,7 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="kangu930@gmail.com"
 EMAIL_HOST_PASSWORD="kangu34388697"
+
+LOGIN_URL = '/inicia-sesion/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
