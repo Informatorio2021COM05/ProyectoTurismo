@@ -9,6 +9,9 @@ class SignUpForm(UserCreationForm):
     last_name = forms.CharField(max_length=140, required=False)
     email = forms.EmailField(required=True)
 
+    def __str__(self):
+        return self.nombre
+
     class Meta:
         model = User
         fields = (
