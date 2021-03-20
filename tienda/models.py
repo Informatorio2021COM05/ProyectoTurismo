@@ -33,4 +33,6 @@ class AtractivosTuristicos(models.Model):
         verbose_name_plural="AtractivosTuristicos"
 
     def __str__(self):
-        return self.nombre
+        tex = '{0}-{1}-{2}-{3}-{4}-{5}-{6}'
+        return tex.format(self.nombre, self.ciudad_origen, self.imagen, self.horarios, self.precio_entrada, self.creacion, self.actualizacion)
+        
