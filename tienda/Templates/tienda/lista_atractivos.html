@@ -1,0 +1,43 @@
+{% extends 'base_a.html' %}
+{% load static %}
+{%block contenido%}
+    
+<nav style="background-color: #F0FFFF;">
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-12">
+            <h2>Listado de Atractivos</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Ciudad</th>
+                            <th>Imagen</th>
+                            <th>Horacios</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in lista_atractivos %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{c.nombre}}</td>
+                            <td>{{c.ciudad_origen}}</td>
+                            <td>{{c.imagen}}</td>
+                            <td>{{c.horarios}}</td>
+                            <td>{{c.precio_entrada}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</nav>
+
+{%endblock%}

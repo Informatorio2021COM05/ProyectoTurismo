@@ -27,3 +27,8 @@ def buscar(request):
 		mensaje = "No has introducido nada"
 
 	return HttpResponse(mensaje)
+
+def listaAtractivos(request):
+	lista_atractivos = AtractivosTuristicos.objects.all()
+	return render(request, "tienda/lista_atractivos.html", {"lista_atractivos" : lista_atractivos})
+
