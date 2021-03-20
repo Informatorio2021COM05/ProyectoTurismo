@@ -30,14 +30,4 @@ def cerrar_s(request):
 def perfil_user(request):
     return render(request, "ProyectoWebApp/home2.html",{})
 
-def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            message.success(request, f'Usuario {username} creado')
-    else:
-        form = UserCreationForm()
 
-    context = { 'form' : form }
-    return render(request, 'perfilUser/register.html', context)
